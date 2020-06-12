@@ -5,6 +5,7 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     [SerializeField] float health = 100f;
+    [SerializeField] GameObject particleOnDestoy;
 
     public void DealDamage(float damage)
     {
@@ -18,5 +19,7 @@ public class Health : MonoBehaviour
     private void Destroy()
     {
         Destroy(gameObject);
+        var particle = Instantiate(particleOnDestoy, transform.position, Quaternion.identity);
+        Destroy(particle, 3);
     }
 }

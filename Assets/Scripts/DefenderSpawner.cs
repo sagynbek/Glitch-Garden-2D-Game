@@ -5,6 +5,7 @@ using UnityEngine;
 public class DefenderSpawner : MonoBehaviour
 {
     Defender defender;
+    bool[,] usedCells = new bool[15, 15];
 
     public void SetDefender(Defender newDefender)
     {
@@ -23,7 +24,7 @@ public class DefenderSpawner : MonoBehaviour
         var starDisplay = FindObjectOfType<StarDisplay>();
         int defenderCost = defender.GetStarCost();
 
-        if (starDisplay.HaveEnoughStars(defenderCost))
+        if ( usedCells[Mathf.RoundToInt(gridPos.x), Mathf.RoundToInt(gridPos.y)] != true && starDisplay.HaveEnoughStars(defenderCost))
         {
             SpawnDefender(gridPos);
             starDisplay.SpendStars(defenderCost);
@@ -50,5 +51,6 @@ public class DefenderSpawner : MonoBehaviour
     private void SpawnDefender(Vector2 spawnPosition)
     {
         Defender newDefender = Instantiate(defender, spawnPosition, Quaternion.identity) as Defender;
+        usedCells[ Mathf.RoundToInt(spawnPosition.x), Mathf.RoundToInt(spawnPosition.y)] = true;
     }
 }

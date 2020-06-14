@@ -174,6 +174,8 @@ GameObject:
   - component: {fileID: 6390609148227559030}
   - component: {fileID: 6390609148227559025}
   - component: {fileID: 4400208578987208630}
+  - component: {fileID: 3734006983531122557}
+  - component: {fileID: -4304887451527994550}
   m_Layer: 0
   m_Name: Trophy
   m_TagString: Untagged
@@ -230,6 +232,46 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startCost: 100
+--- !u!61 &3734006983531122557
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6390609148227559024}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.019887745, y: 0.062149167}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.60224473, y: 0.87570167}
+  m_EdgeRadius: 0
+--- !u!114 &-4304887451527994550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6390609148227559024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 820fd6a2485a0e2429cba83024a95335, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 30
+  particleOnDestoy: {fileID: 0}
 --- !u!1 &6390609148359706960
 GameObject:
   m_ObjectHideFlags: 0

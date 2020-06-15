@@ -30,6 +30,6 @@ public class PlayerHealth : MonoBehaviour
 
     void GameOver()
     {
-        FindObjectOfType<LevelLoader>().LoadGameOverScene();
+        FindObjectOfType<LevelController>().PlayerLose();
     }
 }

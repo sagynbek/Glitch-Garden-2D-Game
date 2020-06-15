@@ -8,6 +8,7 @@ public class LevelController : MonoBehaviour
 {
     [SerializeField] int waitToLoad = 5;
     [SerializeField] GameObject winLabel;
+    [SerializeField] GameObject loseLabel;
     int numberOfAttackers = 0;
     bool levelTimerFinished = false;
 
@@ -15,6 +16,7 @@ public class LevelController : MonoBehaviour
     private void Start()
     {
         winLabel.SetActive(false);
+        loseLabel.SetActive(false);
     }
 
     public void AttackerSpawned()
@@ -55,5 +57,11 @@ public class LevelController : MonoBehaviour
         {
             attackerSpawner.StopSpawning();
         }
+    }
+
+    public void PlayerLose()
+    {
+        loseLabel.SetActive(true);
+        Time.timeScale = 0;
     }
 }

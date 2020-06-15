@@ -29,6 +29,12 @@ public class LevelLoader : MonoBehaviour
         SceneManager.LoadScene(newIndex);
     }
 
+    public void ReloadScene()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(currentSceneIndex);
+    }
+
     public void LoadNextScene()
     {
         SceneManager.LoadScene(currentSceneIndex+1);
@@ -36,6 +42,7 @@ public class LevelLoader : MonoBehaviour
 
     public void LoadMainMenu()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(1);
     }
 

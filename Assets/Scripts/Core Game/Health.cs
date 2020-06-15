@@ -21,7 +21,11 @@ public class Health : MonoBehaviour
     private void Destroy()
     {
         Destroy(gameObject);
-        var particle = Instantiate(particleOnDestoy, transform.position, Quaternion.identity);
-        Destroy(particle, 3);
+
+        if (particleOnDestoy)
+        {
+            var particle = Instantiate(particleOnDestoy, transform.position, Quaternion.identity);
+            Destroy(particle, 3);
+        }
     }
 }

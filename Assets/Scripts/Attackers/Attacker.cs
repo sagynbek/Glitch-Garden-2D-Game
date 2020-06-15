@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Attacker : MonoBehaviour
 {
+    [SerializeField] int borderPassStar = 50;
     [Range(0f, 5f)]
     float currentSpeed = 1f;
     GameObject currentTarget;
@@ -50,5 +51,13 @@ public class Attacker : MonoBehaviour
         {
             health.DealDamage(damage);
         }
+    }
+
+    public int GetBorderPassStar() { return borderPassStar; }
+
+    public void DestroyAttacker()
+    {
+        Health health = GetComponent<Health>();
+        health.DealDamage(health.GetHealth()); // Destroy object
     }
 }

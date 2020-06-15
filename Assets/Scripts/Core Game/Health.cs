@@ -16,6 +16,8 @@ public class Health : MonoBehaviour
         }
     }
 
+    public float GetHealth() { return health; }
+
     private void Destroy()
     {
         Destroy(gameObject);

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 207408632}
   - component: {fileID: 207408631}
   m_Layer: 0
-  m_Name: Gnome (1)
+  m_Name: Gravestone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

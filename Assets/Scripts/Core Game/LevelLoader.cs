@@ -46,6 +46,11 @@ public class LevelLoader : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
+    public void LoadOptionsScreen()
+    {
+        SceneManager.LoadScene("Options Screen");
+    }
+
     public void LoadGameOverScene()
     {
         StartCoroutine(WaitAndLoadScene("Game Over"));

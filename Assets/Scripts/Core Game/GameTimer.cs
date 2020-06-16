@@ -10,6 +10,11 @@ public class GameTimer : MonoBehaviour
     [SerializeField] float levelTime = 10;
     bool triggeredLevelFinished = false;
 
+    void Start()
+    {
+        levelTime = 10f + PlayerPrefsController.GetDifficulty()*5;
+    }
+
     // Update is called once per frame
     void Update()
     {

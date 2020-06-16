@@ -16,6 +16,8 @@ public class AttackerSpawner : MonoBehaviour
 
     IEnumerator Start()
     {
+        maxSpawnDelay = 4f + PlayerPrefsController.GetDifficultyInReverse();
+
         while (spawn)
         {
             yield return new WaitForSeconds(Random.Range(minSpawnDelay, maxSpawnDelay));
@@ -39,6 +41,5 @@ public class AttackerSpawner : MonoBehaviour
     public void StopSpawning()
     {
         spawn = false;
-    }
-    
+    }    
 }

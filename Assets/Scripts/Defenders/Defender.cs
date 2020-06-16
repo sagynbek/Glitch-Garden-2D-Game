@@ -15,4 +15,9 @@ public class Defender : MonoBehaviour
     {
         return startCost;
     }
+
+    private void OnDestroy()
+    {
+        FindObjectOfType<DefenderSpawner>().OnDefenderDestroy(GetComponent<Defender>());
+    }
 }

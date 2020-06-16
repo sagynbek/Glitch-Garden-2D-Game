@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,6 +7,22 @@ public class DefenderSpawner : MonoBehaviour
 {
     Defender defender;
     bool[,] usedCells = new bool[15, 15];
+    GameObject defenderParent;
+    const string DEFENDER_PARENT_NAME = "Defenders";
+
+    private void Start()
+    {
+        CreateDefenderParent();
+    }
+
+    private void CreateDefenderParent()
+    {
+        defenderParent = GameObject.Find(DEFENDER_PARENT_NAME);
+        if (!defenderParent)
+        {
+            defenderParent = new GameObject(DEFENDER_PARENT_NAME);
+        }
+    }
 
     public void SetDefender(Defender newDefender)
     {
@@ -51,6 +68,13 @@ public class DefenderSpawner : MonoBehaviour
     private void SpawnDefender(Vector2 spawnPosition)
     {
         Defender newDefender = Instantiate(defender, spawnPosition, Quaternion.identity) as Defender;
+        newDefender.transform.parent = defenderParent.transform;
+
         usedCells[ Mathf.RoundToInt(spawnPosition.x), Mathf.RoundToInt(spawnPosition.y)] = true;
+    }
+
+    public void OnDefenderDestroy(Defender defender)
+    {
+        usedCells[Mathf.RoundToInt(defender.transform.position.x), Mathf.RoundToInt(defender.transform.position.y)] = false;
     }
 }

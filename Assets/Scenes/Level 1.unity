@@ -367,7 +367,7 @@ PrefabInstance:
     - target: {fileID: 6390609148227559030, guid: 3fc23eda6c14456419257efac5782237,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6390609148227559030, guid: 3fc23eda6c14456419257efac5782237,
         type: 3}
@@ -437,7 +437,7 @@ PrefabInstance:
     - target: {fileID: 240431273417613413, guid: 7c696454280e9d34191374d3ca4fa138,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 240431273417613413, guid: 7c696454280e9d34191374d3ca4fa138,
         type: 3}
@@ -694,7 +694,7 @@ PrefabInstance:
     - target: {fileID: 3059410220324641608, guid: ac1c2f27d4c28c9489dee0746c52a6bf,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5132094512369101970, guid: ac1c2f27d4c28c9489dee0746c52a6bf,
         type: 3}
@@ -1447,6 +1447,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Level Lost Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 5903277504624638729, guid: 47c98ae59faf36b4c8cdb365f088c8b6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8906311364252372071, guid: 47c98ae59faf36b4c8cdb365f088c8b6,
         type: 3}

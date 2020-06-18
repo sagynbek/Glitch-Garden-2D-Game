@@ -66,7 +66,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  damage: 100
+  damage: 200
 --- !u!60 &2735965731664223508
 PolygonCollider2D:
   m_ObjectHideFlags: 0

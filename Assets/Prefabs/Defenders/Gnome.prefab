@@ -121,7 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820fd6a2485a0e2429cba83024a95335, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 50
   particleOnDestoy: {fileID: 0}
 --- !u!1 &7552328111770816386
 GameObject:

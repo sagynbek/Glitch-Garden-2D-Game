@@ -150,6 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 455103196e79223449c45b42e11a58a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  borderPassStar: 50
 --- !u!114 &5399090640017897736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -162,7 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820fd6a2485a0e2429cba83024a95335, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 250
   particleOnDestoy: {fileID: 5747979711711576972, guid: a027e663b7ff6f04da32a73ab56297a0,
     type: 3}
 --- !u!114 &3432966245725111652
